@@ -3,21 +3,19 @@ const fn = require("./fn");
 let user = undefined;
 let userMap = undefined;
 
-// 매 테스트 전 실행
-beforeEach(() => {
-  user = {
-    name: "최동호",
-    age: 34,
-    job: "웹개발자",
-    isMale: true,
-    hobbies: ["볼링", "영화감상", "자전거", "카페가기"],
-    skillSet: new Set(["html", "css", "javascript"]),
-  };
-  userMap = new Map([["최동호", user]]);
-});
-
 for (const f in fn) {
   if (fn.hasOwnProperty(f)) {
+    // 테스트 전 초기화
+    user = {
+      name: "최동호",
+      age: 34,
+      job: "웹개발자",
+      isMale: true,
+      hobbies: ["볼링", "영화감상", "자전거", "카페가기"],
+      skillSet: new Set(["html", "css", "javascript"]),
+    };
+    userMap = new Map([["최동호", user]]);
+
     describe(`${f} 테스트 진행`, () => {
       const deepCopy = fn[f];
 
