@@ -1,0 +1,14 @@
+{
+  "name": "deep-copy-jest",
+  "version": "1.0.0",
+  "description": "flab frontend course 202305",
+  "main": "fn.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "donghochoi",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
